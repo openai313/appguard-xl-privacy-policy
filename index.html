@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — AppGuard XL</title>
+<style>
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:860px;margin:2rem auto;padding:0 1.25rem;color:#1f2328;line-height:1.6}
+h1{font-size:1.7rem} table{border-collapse:collapse;width:100%;margin:1rem 0}
+th,td{border:1px solid #d0d7de;padding:.5rem .6rem;text-align:left;vertical-align:top;font-size:.95rem}
+th{background:#f6f8fa} code{background:#f6f8fa;padding:.1rem .3rem;border-radius:4px}
+</style></head><body>
+<h1>Dasar Privasi &amp; Pernyataan 100% Storan Tempatan (Privacy Policy — Local-Only Architecture)</h1>
+<p><strong>Nama Aplikasi:</strong> AppGuard XL</p>
+<p><strong>Application ID (Package Name):</strong> <code>com.empirepixelspro.appguard.xl</code></p>
+<p><strong>Penerbit:</strong> Empire Pixels Pro</p>
+<p><strong>Emel Sokongan:</strong> <code>viralgrabtop@gmail.com</code></p>
+<p><strong>Tarikh Kemas Kini:</strong> November 2026</p>
+<hr>
+<h2>1. Pernyataan Utama — 100% Storan Tempatan, Tiada Cloud, Tiada Penghantaran ke Pelayan Kami</h2>
+<p><strong>AppGuard XL</strong> dibina mengikut prinsip <strong>Local-First &amp; Zero-Server</strong>:</p>
+<ul>
+<li><strong>SEMUA DATA PENGGUNA DISIMPAN 100% SECARA TEMPATAN (LOCAL STORAGE) DI DALAM PERANTI ANDROID ANDA SAHAJA.</strong></li>
+<li><strong>TIADA STORAN AWAN (NO CLOUD):</strong> Empire Pixels Pro <strong>TIDAK</strong> menyediakan, mengendalikan, atau menyegerakkan fail anda ke mana-mana pelayan awan (*cloud server*).</li>
+<li><strong>TIADA DATA DIHANTAR KE PELAYAN KAMI:</strong> Kami <strong>TIDAK</strong> mengumpul, memuat naik, membaca, berkongsi, atau menjual sebarang fail sandaran APK, senarai aplikasi terpasang, PIN/kata laluan, gambar penceroboh, lokasi, atau nota peti besi anda ke pelayan Empire Pixels Pro.</li>
+<li>Jika anda menyahpasang (*uninstall*) AppGuard XL atau memadam data aplikasi dalam tetapan Android, semua data tempatan yang tersimpan di dalam ruang peribadi aplikasi akan dipadamkan secara kekal daripada peranti anda.</li>
+</ul>
+<hr>
+<h2>2. Perincian Data yang Diproses Secara Tempatan (On-Device Only)</h2>
+<table>
+<tr><th>Kategori Data</th><th>Lokasi Penyimpanan</th><th>Dihantar ke Pelayan Empire Pixels Pro?</th><th>Tujuan Penggunaan</th></tr>
+<tr><td><strong>Senarai Aplikasi Terpasang (<code>QUERY_ALL_PACKAGES</code>)</strong></td><td>RAM &amp; Room DB tempatan sahaja</td><td><strong>TIDAK (0%)</strong></td><td>Audit keselamatan/spyware, pengiraan SHA-256, sandaran APK terpilih, dan pemilihan aplikasi untuk Per-App Lock.</td></tr>
+<tr><td><strong>Fail Sandaran APK (<code>appguard_backups/</code>)</strong></td><td>Storan dalaman peribadi telefon pengguna</td><td><strong>TIDAK (0%)</strong></td><td>Membolehkan pemulihan (*restore*), sejarah versi, dan perkongsian APK luar talian atas kehendak pengguna.</td></tr>
+<tr><td><strong>PIN, Kata Laluan &amp; Status Biometrik</strong></td><td>DataStore tempatan &amp; Android Keystore / <code>BiometricPrompt</code></td><td><strong>TIDAK (0%)</strong></td><td>Mengunci aplikasi terpilih dan Peti Sandaran. Data cap jari/wajah dikendalikan sepenuhnya oleh perkakasan Android OS.</td></tr>
+<tr><td><strong>Foto Selfie Penceroboh (<code>intruder_photos/</code>) &amp; Lokasi Kasar</strong></td><td>Storan dalaman peribadi telefon pengguna</td><td><strong>TIDAK (0%)</strong></td><td>Diaktifkan secara pilihan (dengan kebenaran *runtime* pengguna) untuk menangkap gambar kamera hadapan (CameraX) + lokasi kasar + tarikh/masa selepas ≥ 3 percubaan PIN salah.</td></tr>
+<tr><td><strong>Nota &amp; Foto Private Mini-Vault</strong></td><td>Room DB tempatan + Android Photo Picker</td><td><strong>TIDAK (0%)</strong></td><td>Simpanan nota peribadi dan lampiran gambar tanpa kebenaran storan luas.</td></tr>
+<tr><td><strong>Keputusan Imbasan SHA-256 &amp; Threat Sandbox</strong></td><td>Diproses 100% luar talian pada CPU telefon</td><td><strong>TIDAK (0%)</strong></td><td>Mengesan risiko kebenaran berbahaya, APK sideload, dan aplikasi tersembunyi.</td></tr>
+</table>
+<hr>
+<h2>3. Kebenaran Peranti &amp; Tujuan Sah</h2>
+<p>AppGuard XL hanya meminta kebenaran yang benar-benar diperlukan untuk fungsi teras keselamatan dan sandaran:</p>
+<p>1. <strong><code>QUERY_ALL_PACKAGES</code>:</strong> Digunakan semata-mata secara tempatan untuk menyenaraikan aplikasi terpasang bagi tujuan audit keselamatan, sandaran APK, dan pemilihan Per-App Lock.</p>
+<p>2. <strong><code>REQUEST_DELETE_PACKAGES</code>:</strong> Membolehkan pengguna membuang aplikasi berbahaya melalui dialog nyahpasang rasmi sistem Android (<code>ACTION_DELETE</code>).</p>
+<p>3. <strong><code>PACKAGE_USAGE_STATS</code> &amp; <code>SYSTEM_ALERT_WINDOW</code> (Akses Khas Pilihan Pengguna):</strong> Diperlukan hanya jika pengguna mengaktifkan Per-App Lock masa nyata supaya AppGuard XL dapat mengesan pelancaran aplikasi yang dikunci dan memaparkan skrin kunci PIN/Kata Laluan/Biometrik.</p>
+<p>4. <strong><code>FOREGROUND_SERVICE_SPECIAL_USE</code> &amp; <code>POST_NOTIFICATIONS</code>:</strong> Menjalankan perkhidmatan pemantauan Per-App Lock secara telus dengan notifikasi berterusan di bar status.</p>
+<p>5. <strong><code>USE_BIOMETRIC</code>:</strong> Membolehkan buka kunci menggunakan pengimbas cap jari atau pengecaman wajah perkakasan peranti melalui Android <code>BiometricPrompt</code>.</p>
+<p>6. <strong><code>CAMERA</code> &amp; <code>ACCESS_COARSE_LOCATION</code> (Kebenaran Runtime Pilihan):</strong> Diminta hanya jika pengguna mengaktifkan ciri *Intruder Selfie &amp; Location Log*. Tiada lokasi tepat (<code>ACCESS_FINE_LOCATION</code>) atau lokasi latar belakang (<code>ACCESS_BACKGROUND_LOCATION</code>) digunakan.</p>
+<p>7. <strong>Tiada Kebenaran Storan Luas:</strong> AppGuard XL <strong>TIDAK</strong> meminta <code>READ_MEDIA_IMAGES</code>, <code>READ_MEDIA_VIDEO</code>, <code>READ_EXTERNAL_STORAGE</code>, atau <code>MANAGE_EXTERNAL_STORAGE</code>. Pemilihan gambar menggunakan <strong>Android Photo Picker</strong> dan pemilihan fail menggunakan <strong>Storage Access Framework (SAF)</strong>.</p>
+<hr>
+<h2>4. Perkhidmatan Pihak Ketiga (Google AdMob &amp; Google Play Billing)</h2>
+<p>Walaupun <strong>Empire Pixels Pro tidak menyimpan atau menerima sebarang data pengguna ke pelayan kami</strong>, aplikasi ini menggunakan dua SDK rasmi daripada Google:</p>
+<p>1. <strong>Google Mobile Ads (AdMob) — Pelan Free Sahaja:</strong></p>
+<p>   - Digunakan untuk memaparkan iklan banner pada versi percuma (<code>ca-app-pub-4638917198108547/7296845478</code>).</p>
+<p>   - Google AdMob boleh memproses pengecam peranti (*Advertising ID*) dan data diagnostik iklan mengikut <a href="https://policies.google.com/privacy">Dasar Privasi Google</a>.</p>
+<p>   - <strong>Iklan dimatikan 100%</strong> secara automatik apabila pengguna menaik taraf ke <strong>Pro Lifetime</strong> atau mengaktifkan <strong>Kod Promo 3 Bulan</strong>.</p>
+<p>2. <strong>Google Play Billing Library:</strong></p>
+<p>   - Digunakan untuk memproses pembelian sekali bayar seumur hidup (<strong>Pro Lifetime</strong>: <code>appguard_xl_pro_lifetime</code> dan promosi bulanan Double Day <code>appguard_xl_pro_lifetime_doubleday</code>) secara selamat melalui Google Play Store. Empire Pixels Pro tidak pernah melihat atau menyimpan maklumat kad kredit atau perbankan anda.</p>
+<p>3. <strong>Laporan Maklum Balas &amp; Kerosakan Sukarela (*Voluntary Feedback &amp; Crash Reports*):</strong></p>
+<p>   - <strong>Tiada penghantaran automatik di latar belakang.</strong> Laporan kerosakan (*crash diagnostics*) hanya disimpan secara tempatan pada peranti terlebih dahulu dan <strong>hanya dihantar melalui HTTPS yang disulitkan apabila pengguna secara sukarela menekan butang "Hantar Laporan"</strong> di dalam dialog Maklum Balas atau Popup Laporan Kerosakan.</p>
+<p>   - Laporan sukarela tersebut hanya mengandungi mesej yang ditaip pengguna, versi aplikasi, model peranti, versi Android, dan jejak teknikal ralat (*stack trace*) untuk tujuan pembaikan bug — <strong>tiada senarai aplikasi, fail APK, PIN, foto penceroboh, atau nota peti besi pernah disertakan</strong>.</p>
+<hr>
+<h2>5. English Summary (Ready for Google Play Privacy Policy URL)</h2>
+<h3>Privacy Policy — AppGuard XL (100% Local Storage Guarantee)</h3>
+<p><strong>Publisher:</strong> Empire Pixels Pro | <strong>Package:</strong> <code>com.empirepixelspro.appguard.xl</code> | <strong>Contact:</strong> <code>viralgrabtop@gmail.com</code></p>
+<p><strong>100% Local-Only Data Sovereignty:</strong></p>
+<p>All personal data managed by <strong>AppGuard XL</strong>—including your installed app inventory, extracted APK backups, backup version history, Per-App Lock lists, PINs/passwords, CameraX intruder selfies, coarse intruder location timestamps, and Private Rich-Text Notes Vault items—is stored <strong>100% locally on your Android device</strong>. <strong>There is NO cloud storage, and ZERO personal data is ever transmitted automatically to Empire Pixels Pro servers.</strong></p>
+<ul>
+<li><strong>On-Device Security Processing:</strong> Package inventory (<code>QUERY_ALL_PACKAGES</code>), permission audits, QR/URL/APK/ZIP anti-scam checks, SHA-256 verification, and Threat Sandbox detection execute strictly offline on your device and are never uploaded, profiled, or sold.</li>
+<li><strong>Voluntary User Feedback &amp; Crash Reports:</strong> If an unexpected crash occurs, technical stack traces are saved locally first and are <strong>only transmitted over HTTPS if the user explicitly taps "Send Report"</strong> in the recovery dialog or submits the optional in-app Feedback form. Voluntary reports contain only the user's message, app version, device model, OS version, and crash stack trace—never personal backups, PINs, photos, or vault notes.</li>
+<li><strong>Third-Party Google SDKs:</strong> The Free tier integrates the official <strong>Google Mobile Ads SDK (AdMob)</strong> to display banner ads (automatically disabled for Pro Lifetime / active Promo users). In-app purchases (<code>appguard_xl_pro_lifetime</code> and once-a-month Double Day <code>appguard_xl_pro_lifetime_doubleday</code>) are processed exclusively through the official <strong>Google Play Billing Library</strong>.</li>
+<li><strong>User Control &amp; Data Deletion:</strong> Because no user account or remote database exists on our servers, you maintain complete physical control over your data. Clearing app storage or uninstalling AppGuard XL permanently deletes all local backups, logs, and vault records from your device.</li>
+<li><strong>Children's Privacy:</strong> AppGuard XL is intended for general audiences aged 13+ and does not knowingly collect personal information from children.</li>
+<li><strong>Contact:</strong> For privacy questions, email <code>viralgrabtop@gmail.com</code>.</li>
+</ul>
+</body></html>
